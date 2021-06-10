@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <title>text ganti warna</title>
+    <style type="text/css" media="all">
+      :root{
+        background-color: #000;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        
+        font-family: 'Open Sans', sans-serif;
+      }
+      h2{
+        top: 40%;
+        left: 50%;
+        position: absolute;
+        color: #000;
+        letter-spacing: 5px;
+       
+        transform: translate(-50%,-50%);
+      }
+      h2:before{
+        content: attr(love-text);
+        position:absolute;
+        height:100%;
+        color:pink;
+        -webkit-text-stroke:2px pink;
+        overflow: hidden;
+        animation: animate 5s linear infinite;
+        
+      }
+      @media(max-width:575px){
+        h2{
+          font-size: 40px;
+        }
+      }
+      @media(min-width:576px){
+        h2{
+          font-size: 130px;
+        }
+      }
+      @keyframes animate {
+        0%,10%,100%{
+          width: 0%;
+        }
+        70%,90%{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+ <h2 love-text="semangat..">semangat..</h2>
+  </body>
+</html>
